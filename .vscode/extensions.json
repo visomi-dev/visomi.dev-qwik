@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "PKief.material-icon-theme",
+    "dbaeumer.vscode-eslint",
+    "unifiedjs.vscode-mdx"
+  ],
+  "unwantedRecommendations": []
+}

@@ -5,6 +5,14 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "chrome",
+      "request": "launch",
+      "name": "launch chrome against localhost",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "runtimeArgs": ["--auto-open-devtools-for-tabs"]
+    },
+    {
       "type": "node",
       "name": "dev.debug",
       "request": "launch",
