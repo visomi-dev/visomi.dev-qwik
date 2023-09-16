@@ -8,7 +8,7 @@ import visomi from '~/media/images/visomi-illustration.png';
 import nivePreview from '~/media/images/nive-preview.svg';
 
 export const head: DocumentHead = {
-  title: 'visomi | cross-over developer',
+  title: 'visomi.dev',
   meta: [
     {
       name: 'description',
@@ -46,23 +46,24 @@ export default component$(() => {
           <h1 class="mt-6 text-2xl font-semibold">Hello! I'm Michael</h1>
 
           <p class="mt-2 text-center text-3xl font-bold">
-            and I transform <br /> ideas into reality through software <b />
+            and I transform <br /> ideas into reality through software
+            development <b />
             to create a better world to live.
           </p>
 
           <div class="flex gap-8">
             <a
-              class="mt-6 rounded-full bg-slate-900 px-4 py-2 text-white"
-              href="/resume"
-            >
-              Resume
-            </a>
-
-            <a
-              class="mt-6 rounded-full bg-slate-900 px-4 py-2 text-sm text-white"
+              class="mt-6 flex items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-xl text-white hover:bg-opacity-75"
               href="#contact"
             >
               Contact
+            </a>
+
+            <a
+              class="mt-6 flex items-center justify-center rounded-full bg-slate-900 px-5 py-2 text-xl text-white hover:bg-opacity-75"
+              href="/resume"
+            >
+              Resume
             </a>
           </div>
         </div>
@@ -99,7 +100,7 @@ export default component$(() => {
                     Flutter
                   </span>
 
-                  <span class="rounded-full bg-blue-300 px-4 py-1 text-sm">
+                  <span class="rounded-full bg-green-300 px-4 py-1 text-sm">
                     Elysia
                   </span>
                 </div>
@@ -129,27 +130,30 @@ export default component$(() => {
 
           <div class="relative mt-6 flex flex-col gap-3 p-2 pl-5 text-justify before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-slate-900">
             <p>
-              I'm a
+              <span>I'm a</span>
+
               <a
-                class="px-1"
+                class="mx-2 text-blue-400 underline"
                 href="https://crossoverdeveloper.com/"
                 target="__blank"
               >
                 cross-over developer
               </a>
-              with a background in developer, tech lead, software architect, and
-              a little of UX/UI. I'm passionate about creating software that
-              helps people to improve their lives.
+
+              <span>
+                with a background in develop, design, lead, maintain, and and a
+                little of UX/UI. I'm passionate about creating software that
+                helps people to improve their lives or solve problems.
+              </span>
             </p>
 
             <p>
               I'm a self-taught developer, I started my journey in 2012 when I
-              was 16 years old. I started learning about programming and
+              was 15 years old. I started learning about programming and
               programming languages, and I fell in love with it. I learned about
               HTML, CSS, JavaScript, and Python. I started to create scripts for
-              make my work more pleasant (I was working as Compute Technical
-              Support at the age of 19 years old) and to automate repetitive
-              tasks.
+              make my work more pleasant (I was working as Technical Support at
+              the age of 19 years old) and to automate repetitive tasks.
             </p>
 
             <p>
@@ -163,7 +167,7 @@ export default component$(() => {
 
         <figure id="contact">
           <figcaption>
-            <h2 class="text-4xl font-bold">Do you have some in mind?</h2>
+            <h2 class="text-4xl font-bold">Do you have something in mind?</h2>
           </figcaption>
 
           <div class="mt-6 flex flex-col gap-3">
