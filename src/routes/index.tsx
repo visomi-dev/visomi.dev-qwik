@@ -6,6 +6,7 @@ import logotype from '~/media/images/logotype.svg';
 import menu from '~/media/images/menu.svg';
 import visomi from '~/media/images/visomi-illustration.png';
 import nivePreview from '~/media/images/nive-preview.svg';
+import galaxy from '~/media/images/galaxy-illustration.svg';
 
 export const head: DocumentHead = {
   title: 'visomi.dev',
@@ -20,7 +21,7 @@ export const head: DocumentHead = {
 export default component$(() => {
   return (
     <div class="flex min-h-full w-full flex-col">
-      <header class="mx-auto flex w-full max-w-xl justify-between p-6">
+      <header class="mx-auto flex w-full max-w-2xl justify-between p-6">
         <img
           src={logotype}
           alt="visomi personal logotype"
@@ -28,13 +29,44 @@ export default component$(() => {
           height={40}
         />
 
-        <button class="p-2 md:pointer-events-none md:opacity-0">
-          <img src={menu} alt="hamburger menu icon" width={28} height={28} />
-        </button>
+        <div class="flex items-center justify-center">
+          <button class="p-2 md:pointer-events-none md:opacity-0">
+            <img src={menu} alt="hamburger menu icon" width={28} height={28} />
+          </button>
+
+          <ul class="fixed hidden flex-col gap-2 md:relative md:flex md:flex-row">
+            <li class="flex">
+              <a class="px-2 py-1 text-yellow-400" href="#me">
+                hi 👋
+              </a>
+            </li>
+
+            <li class="flex">
+              <a class="px-2 py-1 text-green-700" href="#last-projects">
+                last projects 🚀
+              </a>
+            </li>
+
+            <li class="flex">
+              <a class="px-2 py-1 text-blue-700" href="#last-projects">
+                about me 🤔
+              </a>
+            </li>
+
+            <li class="flex">
+              <a class="px-2 py-1 text-slate-700" href="#contact">
+                contact 📧
+              </a>
+            </li>
+          </ul>
+        </div>
       </header>
 
       <main class="mx-auto flex w-full max-w-xl flex-col gap-10 p-6">
-        <div class="flex flex-col items-center justify-center rounded-2xl bg-slate-100 px-6 py-8">
+        <figure
+          id="me"
+          class="flex flex-col items-center justify-center rounded-2xl bg-slate-100 px-6 py-8"
+        >
           <img
             class="rounded"
             src={visomi}
@@ -43,7 +75,9 @@ export default component$(() => {
             height={400}
           />
 
-          <h1 class="mt-6 text-2xl font-semibold">Hello! I'm Michael</h1>
+          <figcaption class="mt-6">
+            <h1 class="text-2xl font-semibold">Hello! I'm Michael</h1>
+          </figcaption>
 
           <p class="mt-2 text-center text-3xl font-bold">
             and I transform <br /> ideas into reality through software
@@ -53,20 +87,20 @@ export default component$(() => {
 
           <div class="flex gap-8">
             <a
-              class="mt-6 flex items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-xl text-white hover:bg-opacity-75"
+              class="mt-6 flex items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-xl text-white md:hover:bg-opacity-75"
               href="#contact"
             >
               Contact
             </a>
 
             <a
-              class="mt-6 flex items-center justify-center rounded-full bg-slate-900 px-5 py-2 text-xl text-white hover:bg-opacity-75"
+              class="mt-6 flex items-center justify-center rounded-full bg-slate-900 px-5 py-2 text-xl text-white md:hover:bg-opacity-75"
               href="/resume"
             >
               Resume
             </a>
           </div>
-        </div>
+        </figure>
 
         <figure id="last-projects">
           <figcaption>
@@ -128,6 +162,14 @@ export default component$(() => {
             <h2 class="text-4xl font-bold">About Me</h2>
           </figcaption>
 
+          <img
+            class="-mb-8 -mt-4 w-full"
+            src={galaxy}
+            alt="galaxy illustration"
+            width={300}
+            height={200}
+          />
+
           <div class="relative mt-6 flex flex-col gap-3 p-2 pl-5 text-justify before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-slate-900">
             <p>
               <span>I'm a</span>
@@ -141,7 +183,7 @@ export default component$(() => {
               </a>
 
               <span>
-                with a background in develop, design, lead, maintain, and and a
+                with a background in develop, design, lead, maintain, and a
                 little of UX/UI. I'm passionate about creating software that
                 helps people to improve their lives or solve problems.
               </span>
