@@ -1,7 +1,7 @@
 export const nav = {
-  introduction: '#introduction',
-  content: '#content',
-  projects: '#projects',
-  aboutMe: '#about-me',
-  contact: '#contact',
+  introduction: 'introduction',
+  aboutMe: 'about-me',
+  projects: 'projects',
+  characterSheet: 'character-sheet',
+  contact: 'contact',
 };

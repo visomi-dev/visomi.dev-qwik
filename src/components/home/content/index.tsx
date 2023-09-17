@@ -4,6 +4,7 @@ import { Introduction } from './introduction';
 import { Projects } from './projects';
 import { AboutMe } from './about-me';
 import { Contact } from './contact';
+import { CharacterSheet } from './character-sheet';
 
 export const Content = component$(() => {
   return (
@@ -13,6 +14,8 @@ export const Content = component$(() => {
       <AboutMe />
 
       <Projects />
+
+      <CharacterSheet />
 
       <Contact />
     </main>

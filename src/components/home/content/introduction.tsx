@@ -1,4 +1,5 @@
 import { component$ } from '@builder.io/qwik';
+import { Link } from '@builder.io/qwik-city';
 
 import visomi from '~/media/images/visomi-illustration.png';
 
@@ -21,7 +22,9 @@ export const Introduction = component$(() => {
       />
 
       <figcaption class="mt-6">
-        <h1 class="text-2xl font-semibold">Hello! I'm Michael</h1>
+        <h1 class="text-2xl font-semibold">
+          Hello! <span class="pr-1">👋</span> I'm Michael
+        </h1>
       </figcaption>
 
       <p class="mt-2 text-center text-3xl font-bold">
@@ -31,19 +34,19 @@ export const Introduction = component$(() => {
       </p>
 
       <div class="flex gap-8">
-        <a
+        <Link
           class="mt-6 flex items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-xl text-white md:hover:bg-opacity-75"
-          href={nav.content}
+          href={`#${nav.contact}`}
         >
           Contact
-        </a>
+        </Link>
 
-        <a
+        <Link
           class="mt-6 flex items-center justify-center rounded-full bg-slate-900 px-5 py-2 text-xl text-white md:hover:bg-opacity-75"
           href={RESUME}
         >
           Resume
-        </a>
+        </Link>
       </div>
     </figure>
   );
