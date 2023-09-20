@@ -1,64 +1,17 @@
-import { Resource, component$, useResource$ } from '@builder.io/qwik';
+import { Resource, component$ } from '@builder.io/qwik';
 
 import { nav } from '../constants';
 
+import {
+  useCodingTime,
+  useEditors,
+  useLanguages,
+} from './hooks/character-sheet';
+
 export const CharacterSheet = component$(() => {
-  const codingTime = useResource$<{
-    total: string;
-    bestDay: string;
-  }>(async () => {
-    try {
-      const response = await fetch(
-        'https://wakatime.com/share/@visomi/3a77752c-e065-4e64-9bde-78945bdb2d8f.json',
-      );
-
-      const { data } = await response.json();
-
-      return {
-        total: data?.grand_total?.human_readable_total_including_other_language,
-        bestDay: `${data?.best_day?.date} / ${data?.best_day?.text}`,
-      };
-    } catch (error) {
-      console.error(error);
-
-      return {
-        total: '...',
-        bestDay: '...',
-      };
-    }
-  });
-
-  const languages = useResource$<
-    {
-      name: string;
-      percent: number;
-      color: string;
-    }[]
-  >(async () => {
-    try {
-      const response = await fetch(
-        'https://wakatime.com/share/@visomi/73ed1619-ca1e-4d2f-8c06-48a531a3f20b.json',
-      );
-
-      const { data } = (await response.json()) as {
-        data: {
-          name: string;
-          percent: number;
-          color: string;
-        }[];
-      };
-
-      return data.map(({ name, percent, color }) => ({
-        name,
-        percent,
-        color,
-      }));
-    } catch (error) {
-      console.error(error);
-
-      return [];
-    }
-  });
+  const codingTime = useCodingTime();
+  const languages = useLanguages();
+  const editors = useEditors();
 
   return (
     <figure id={nav.characterSheet}>
@@ -99,24 +52,50 @@ export const CharacterSheet = component$(() => {
             </li>
 
             <li>
-              Languajes:
+              Languages:
               <Resource
                 value={languages}
                 onPending={() => <p>...</p>}
                 onResolved={(languages) => (
-                  <div class="flex gap-2">
+                  <div class="grid grid-cols-3 gap-2 md:grid-cols-5">
                     {languages.map(({ name, percent, color }) => (
-                      <div class="flex flex-col gap-1" key={name}>
-                        <div class="flex justify-between">
+                      <div class="flex gap-1" key={name}>
+                        <div
+                          class="h-full w-1"
+                          style={{ backgroundColor: color }}
+                        ></div>
+
+                        <div class="flex w-full flex-col items-center justify-center gap-0.5 p-1 text-sm">
                           <p>{name}</p>
 
                           <p>{percent}%</p>
                         </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              />
+            </li>
 
+            <li>
+              Editors:
+              <Resource
+                value={editors}
+                onPending={() => <p>...</p>}
+                onResolved={(editors) => (
+                  <div class="grid grid-cols-3 gap-2 md:grid-cols-5">
+                    {editors.map(({ name, percent, color }) => (
+                      <div class="flex gap-1" key={name}>
                         <div
-                          class="h-2"
+                          class="h-full w-1"
                           style={{ backgroundColor: color }}
                         ></div>
+
+                        <div class="flex w-full flex-col items-center justify-center gap-0.5 p-1 text-sm">
+                          <p>{name}</p>
+
+                          <p>{percent}%</p>
+                        </div>
                       </div>
                     ))}
                   </div>
