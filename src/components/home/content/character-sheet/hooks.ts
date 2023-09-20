@@ -1,5 +1,11 @@
 import { useResource$ } from '@builder.io/qwik';
 
+export interface Item {
+  name: string;
+  percent: number;
+  color: string;
+}
+
 export function useCodingTime() {
   return useResource$<{
     total: string;
@@ -41,11 +47,7 @@ export function useLanguages() {
       );
 
       const { data } = (await response.json()) as {
-        data: {
-          name: string;
-          percent: number;
-          color: string;
-        }[];
+        data: Item[];
       };
 
       const result = data
@@ -90,11 +92,7 @@ export function useEditors() {
       );
 
       const { data } = (await response.json()) as {
-        data: {
-          name: string;
-          percent: number;
-          color: string;
-        }[];
+        data: Item[];
       };
 
       const result = data
@@ -117,6 +115,46 @@ export function useEditors() {
       }
 
       return result;
+    } catch (error) {
+      console.error(error);
+
+      return [];
+    }
+  });
+}
+
+export function useOperatingSystems() {
+  return useResource$<Item[]>(async () => {
+    try {
+      const response = await fetch(
+        'https://wakatime.com/share/@visomi/467e4a57-ae28-4918-911b-3ed72a033567.json',
+      );
+
+      const { data } = (await response.json()) as {
+        data: Item[];
+      };
+
+      return data;
+    } catch (error) {
+      console.error(error);
+
+      return [];
+    }
+  });
+}
+
+export function useCategories() {
+  return useResource$<Item[]>(async () => {
+    try {
+      const response = await fetch(
+        'https://wakatime.com/share/@visomi/e1000b57-c2b6-419c-90c4-edc855c05878.json',
+      );
+
+      const { data } = (await response.json()) as {
+        data: Item[];
+      };
+
+      return data;
     } catch (error) {
       console.error(error);
 

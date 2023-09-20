@@ -1,17 +1,23 @@
 import { Resource, component$ } from '@builder.io/qwik';
 
-import { nav } from '../constants';
+import { nav } from '../../constants';
+
+import { List } from './list';
 
 import {
+  useCategories,
   useCodingTime,
   useEditors,
   useLanguages,
-} from './hooks/character-sheet';
+  useOperatingSystems,
+} from './hooks';
 
 export const CharacterSheet = component$(() => {
   const codingTime = useCodingTime();
   const languages = useLanguages();
   const editors = useEditors();
+  const sos = useOperatingSystems();
+  const categories = useCategories();
 
   return (
     <figure id={nav.characterSheet}>
@@ -38,6 +44,7 @@ export const CharacterSheet = component$(() => {
                 onPending={() => <p>...</p>}
                 onResolved={(time) => <p class="text-blue-700">{time.total}</p>}
               />
+              <hr class="my-2" />
             </li>
 
             <li>
@@ -49,6 +56,7 @@ export const CharacterSheet = component$(() => {
                   <p class="text-blue-700">{time.bestDay}</p>
                 )}
               />
+              <hr class="my-2" />
             </li>
 
             <li>
@@ -56,25 +64,9 @@ export const CharacterSheet = component$(() => {
               <Resource
                 value={languages}
                 onPending={() => <p>...</p>}
-                onResolved={(languages) => (
-                  <div class="grid grid-cols-3 gap-2 md:grid-cols-5">
-                    {languages.map(({ name, percent, color }) => (
-                      <div class="flex gap-1" key={name}>
-                        <div
-                          class="h-full w-1"
-                          style={{ backgroundColor: color }}
-                        ></div>
-
-                        <div class="flex w-full flex-col items-center justify-center gap-0.5 p-1 text-sm">
-                          <p>{name}</p>
-
-                          <p>{percent}%</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
+                onResolved={(languages) => <List data={languages} />}
               />
+              <hr class="my-2" />
             </li>
 
             <li>
@@ -82,24 +74,27 @@ export const CharacterSheet = component$(() => {
               <Resource
                 value={editors}
                 onPending={() => <p>...</p>}
-                onResolved={(editors) => (
-                  <div class="grid grid-cols-3 gap-2 md:grid-cols-5">
-                    {editors.map(({ name, percent, color }) => (
-                      <div class="flex gap-1" key={name}>
-                        <div
-                          class="h-full w-1"
-                          style={{ backgroundColor: color }}
-                        ></div>
+                onResolved={(editors) => <List data={editors} />}
+              />
+              <hr class="my-2" />
+            </li>
 
-                        <div class="flex w-full flex-col items-center justify-center gap-0.5 p-1 text-sm">
-                          <p>{name}</p>
+            <li>
+              OS:
+              <Resource
+                value={sos}
+                onPending={() => <p>...</p>}
+                onResolved={(sos) => <List data={sos} />}
+              />
+              <hr class="my-2" />
+            </li>
 
-                          <p>{percent}%</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
+            <li>
+              Categories:
+              <Resource
+                value={categories}
+                onPending={() => <p>...</p>}
+                onResolved={(categories) => <List data={categories} />}
               />
             </li>
           </ul>
