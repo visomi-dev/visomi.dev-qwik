@@ -50,8 +50,10 @@ export function useLanguages() {
         data: Item[];
       };
 
+      const others = data.find(({ name }) => name === 'Other');
+
       const result = data
-        .filter(({ percent }) => percent >= 0.11)
+        .filter(({ percent, name }) => percent >= 0.11 && name !== 'Other')
         .map(({ name, percent, color }) => ({
           name,
           percent,
@@ -64,7 +66,7 @@ export function useLanguages() {
       if (missing > 0) {
         result.push({
           name: 'Others',
-          percent: parseFloat(missing.toFixed(2)),
+          percent: parseFloat((missing + (others?.percent ?? 0)).toFixed(2)),
           color: '#000000',
         });
       }
