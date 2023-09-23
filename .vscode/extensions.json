@@ -2,7 +2,10 @@
   "recommendations": [
     "PKief.material-icon-theme",
     "dbaeumer.vscode-eslint",
-    "unifiedjs.vscode-mdx"
+    "unifiedjs.vscode-mdx",
+    "bradlc.vscode-tailwindcss",
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-spanish"
   ],
   "unwantedRecommendations": []
 }

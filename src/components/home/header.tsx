@@ -50,7 +50,7 @@ export const Header = component$(() => {
   const isMenuOpen = useSignal(false);
 
   return (
-    <header class="mx-auto flex w-full max-w-2xl justify-between p-6">
+    <header class="mx-auto flex w-full max-w-2xl items-center justify-between bg-white p-6">
       <img
         src={logotype}
         alt="visomi personal logotype"
@@ -60,20 +60,20 @@ export const Header = component$(() => {
 
       <div class="flex items-center justify-end md:flex-1">
         <button
-          class="p-2 md:pointer-events-none md:opacity-0"
+          class="md:pointer-events-none md:opacity-0"
           onClick$={() => {
             isMenuOpen.value = !isMenuOpen.value;
           }}
         >
-          <img src={menu} alt="hamburger menu icon" width={28} height={28} />
+          <img src={menu} alt="hamburger menu icon" width={36} height={36} />
         </button>
 
         <ul
           class={[
-            'fixed left-0 top-0 w-full flex-col md:relative md:flex md:w-fit md:flex-row md:gap-4',
+            'fixed left-0 top-0 z-40 w-full flex-col overflow-hidden transition-all duration-500 md:relative md:flex md:max-h-screen md:w-fit md:flex-row md:gap-4',
             {
-              hidden: !isMenuOpen.value,
-              'flex before:fixed before:left-0 before:top-0 before:z-10 before:h-screen before:w-screen before:bg-black before:bg-opacity-50 md:before:hidden':
+              'max-h-0': !isMenuOpen.value,
+              'flex max-h-screen before:fixed before:left-0 before:top-0 before:z-10 before:h-screen before:w-screen before:bg-black before:bg-opacity-50 md:before:hidden':
                 !!isMenuOpen.value,
             },
           ]}

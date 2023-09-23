@@ -11,7 +11,7 @@ export const Introduction = component$(() => {
   return (
     <figure
       id={nav.introduction}
-      class="flex flex-col items-center justify-center rounded-2xl bg-slate-100 px-6 py-8"
+      class="-mt-6 flex flex-col items-center justify-center rounded-2xl bg-slate-100 px-6 py-8"
     >
       <img
         class="rounded"

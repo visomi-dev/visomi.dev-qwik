@@ -18,12 +18,14 @@ export const head: DocumentHead = {
 
 export default component$(() => {
   return (
-    <div class="flex min-h-full w-full flex-col">
+    <div class="relative flex h-screen w-full flex-col">
       <Header />
 
-      <Content />
+      <div class="flex-1 overflow-auto">
+        <Content />
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 });
