@@ -18,7 +18,7 @@ export const head: DocumentHead = {
 
 export default component$(() => {
   return (
-    <div class="relative flex h-[100svh] w-full flex-col">
+    <div class="relative flex h-screen w-full flex-col">
       <Header />
 
       <div class="flex-1 overflow-auto">

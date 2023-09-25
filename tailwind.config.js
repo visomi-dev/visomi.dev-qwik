@@ -6,6 +6,9 @@ module.exports = {
   theme: {
     extend: {
       sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+      height: {
+        screen: '100svh',
+      },
     },
   },
   plugins: [],
