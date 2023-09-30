@@ -19,8 +19,8 @@
 @layer utilities {
   .title-accent {
     background: linear-gradient(#a478e8, #516cf7);
-    background-clip: text;
-    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .bg-accent {
