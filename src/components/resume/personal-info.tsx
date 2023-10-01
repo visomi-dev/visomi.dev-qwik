@@ -22,6 +22,7 @@ export const MyInfo = component$(() => {
       />
 
       <h1 class="text-3xl font-bold">Michael V. S.</h1>
+
       <p>{age} years old</p>
 
       <h2 class="title-accent text-2xl font-bold">Full-Stack Developer</h2>
@@ -41,7 +42,7 @@ export const Quote = component$(() => {
           width={20}
         />
 
-        <p class="p-1 text-[#47516B]">To Infinity and Beyond</p>
+        <p class="p-1 text-slate-600">To Infinity and Beyond</p>
 
         <img
           class="p-1"
