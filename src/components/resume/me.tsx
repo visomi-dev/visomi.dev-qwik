@@ -3,6 +3,7 @@ import { component$ } from '@builder.io/qwik';
 import background from '~/media/images/resume/background.svg';
 import { MyInfo, Quote } from './personal-info';
 import { Contact } from './contact';
+import { Socials } from './socials';
 
 export const Me = component$(() => {
   return (
@@ -18,6 +19,10 @@ export const Me = component$(() => {
       <hr />
 
       <Contact />
+
+      <hr />
+
+      <Socials />
     </div>
   );
 });
