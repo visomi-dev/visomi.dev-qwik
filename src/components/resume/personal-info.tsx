@@ -11,6 +11,12 @@ export const MyInfo = component$(() => {
     ),
   );
 
+  const experience = Math.floor(
+    Math.abs(
+      DateTime.fromFormat('2015-05-01', 'yyyy-MM-dd').diffNow('years').years,
+    ),
+  );
+
   return (
     <div class="flex flex-col gap-2">
       <img
@@ -21,11 +27,17 @@ export const MyInfo = component$(() => {
         height={120}
       />
 
-      <h1 class="text-3xl font-bold">Michael V. S.</h1>
+      <div class="flex flex-col">
+        <h1 class="text-3xl font-bold">Michael V. S.</h1>
 
-      <p>{age} years old</p>
+        <p class="text-sm">{age} years old</p>
+      </div>
 
-      <h2 class="title-accent text-2xl font-bold">Full-Stack Developer</h2>
+      <div class="flex flex-col">
+        <h2 class="title-accent text-2xl font-bold">Full-Stack Developer</h2>
+
+        <p class="text-sm">{experience} years of experience</p>
+      </div>
     </div>
   );
 });
