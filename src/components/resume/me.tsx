@@ -4,6 +4,7 @@ import background from '~/media/images/resume/background.svg';
 import { MyInfo, Quote } from './personal-info';
 import { Contact } from './contact';
 import { Socials } from './socials';
+import { Languages } from './languages';
 
 export const Me = component$(() => {
   return (
@@ -23,6 +24,10 @@ export const Me = component$(() => {
       <hr />
 
       <Socials />
+
+      <hr />
+
+      <Languages />
     </div>
   );
 });

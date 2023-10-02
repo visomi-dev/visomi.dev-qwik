@@ -17,10 +17,15 @@
   "cSpell.words": [
     "CDMX",
     "isotype",
+    "México",
     "Nive",
     "Qwik",
     "Sotelo",
     "Villalba",
-    "visomi"
-  ]
+    "visomi",
+    "wakatime"
+  ],
+  "[svg]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  }
 }

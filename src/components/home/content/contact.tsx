@@ -17,11 +17,11 @@ const webLinks: WebLink[] = [
     href: 'https://twitter.com/visomi_dev',
   },
   {
-    label: 'LinkedIn',
+    label: 'Linkedin',
     href: 'https://www.linkedin.com/in/visomi',
   },
   {
-    label: 'Wakatime',
+    label: 'WakaTime',
     href: 'https://wakatime.com/@visomi',
   },
 ];

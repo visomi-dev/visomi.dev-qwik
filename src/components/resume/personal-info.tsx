@@ -13,7 +13,7 @@ export const MyInfo = component$(() => {
 
   const experience = Math.floor(
     Math.abs(
-      DateTime.fromFormat('2015-05-01', 'yyyy-MM-dd').diffNow('years').years,
+      DateTime.fromFormat('2016-05-01', 'yyyy-MM-dd').diffNow('years').years,
     ),
   );
 
