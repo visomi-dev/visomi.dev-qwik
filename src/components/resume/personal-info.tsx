@@ -13,7 +13,7 @@ export const MyInfo = component$(() => {
 
   const experience = Math.floor(
     Math.abs(
-      DateTime.fromFormat('2016-05-01', 'yyyy-MM-dd').diffNow('years').years,
+      DateTime.fromFormat('2016-06-01', 'yyyy-MM-dd').diffNow('years').years,
     ),
   );
 
@@ -34,7 +34,7 @@ export const MyInfo = component$(() => {
       </div>
 
       <div class="flex flex-col">
-        <h2 class="title-accent text-2xl font-bold">Full-Stack Developer</h2>
+        <h2 class="text-xl font-bold text-slate-700">Full-Stack Developer</h2>
 
         <p class="text-sm">{experience} years of experience</p>
       </div>

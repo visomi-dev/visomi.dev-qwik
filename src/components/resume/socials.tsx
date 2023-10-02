@@ -1,9 +1,9 @@
 import { component$ } from '@builder.io/qwik';
 
-import twitterIcon from '~/media/images/resume/twitter.svg';
-import linkedinIcon from '~/media/images/resume/linkedin.svg';
-import githubIcon from '~/media/images/resume/github.svg';
-import wakatimeIcon from '~/media/images/resume/wakatime.svg';
+import twitterIcon from '~/media/images/resume/logos/twitter.svg';
+import linkedinIcon from '~/media/images/resume/logos/linkedin.svg';
+import githubIcon from '~/media/images/resume/logos/github.svg';
+import wakatimeIcon from '~/media/images/resume/logos/wakatime.svg';
 
 export const Socials = component$(() => {
   return (

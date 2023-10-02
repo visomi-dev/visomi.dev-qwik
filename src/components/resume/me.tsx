@@ -9,7 +9,7 @@ import { Languages } from './languages';
 export const Me = component$(() => {
   return (
     <div
-      class="flex w-full flex-col gap-4 bg-cover p-6 md:h-full"
+      class="flex w-full flex-col gap-4 bg-cover p-6 md:h-full md:w-fit"
       style={{
         backgroundImage: `url(${background})`,
       }}
