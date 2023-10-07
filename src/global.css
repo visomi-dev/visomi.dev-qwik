@@ -26,4 +26,10 @@
   .bg-accent {
     background: linear-gradient(135deg, #a478e8a5, #516cf7a6);
   }
+
+  @media print {
+    .no-scroll-print {
+      overflow: hidden !important;
+    }
+  }
 }
