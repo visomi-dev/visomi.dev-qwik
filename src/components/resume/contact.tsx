@@ -56,7 +56,7 @@ export const Contact = component$(() => {
         <div class="flex flex-col gap-1">
           <p class="leading-4 text-slate-500">Address</p>
 
-          <p class="text-slate-700">CDMX, México</p>
+          <p class="text-slate-700">Mexico City</p>
         </div>
       </li>
     </ul>
