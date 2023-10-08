@@ -28,7 +28,7 @@ export const MyInfo = component$(() => {
       />
 
       <div class="flex flex-col">
-        <h1 class="text-3xl font-bold">Michael V. S.</h1>
+        <h1 class="text-3xl font-bold">Michael Villalba Sotelo</h1>
 
         <p class="text-sm">{age} years old</p>
       </div>
