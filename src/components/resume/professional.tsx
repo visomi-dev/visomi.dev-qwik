@@ -1,20 +1,17 @@
 import { component$ } from '@builder.io/qwik';
 
 import { Experience } from './experience';
-import { Tools } from './tools';
-import { ProgrammingLanguages } from './programming-languages';
-import { Frameworks } from './frameworks';
+import { AboutMe } from './about-me';
+import { TechPreferences } from './tech-preferences';
 
 export const Professional = component$(() => {
   return (
     <div class="flex w-full flex-col gap-4 px-6 py-8 md:h-full">
+      <AboutMe />
+
       <Experience />
 
-      <Tools />
-
-      <ProgrammingLanguages />
-
-      <Frameworks />
+      <TechPreferences />
     </div>
   );
 });

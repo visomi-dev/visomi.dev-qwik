@@ -28,9 +28,7 @@ export const Introduction = component$(() => {
       </figcaption>
 
       <p class="mt-2 text-center text-3xl font-bold">
-        and I transform <br /> ideas into reality through software development{' '}
-        <b />
-        to create a better world to live.
+        and I transform <br /> ideas into reality through software development.
       </p>
 
       <div class="flex gap-8">
