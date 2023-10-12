@@ -25,7 +25,7 @@ export const Languages = component$(() => {
           <div class="flex flex-col gap-1">
             <p class="text-slate-700">English</p>
 
-            <p class="leading-4 text-slate-500">B2</p>
+            <p class="leading-4 text-slate-500">B1</p>
           </div>
         </li>
       </ul>
