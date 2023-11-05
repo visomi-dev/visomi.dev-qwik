@@ -22,6 +22,7 @@
     "kavak",
     "México",
     "nestjs",
+    "nive",
     "Nive",
     "Qwik",
     "Sotelo",
@@ -31,5 +32,9 @@
   ],
   "[svg]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
-  }
+  },
+  "tailwindCSS.experimental.classRegex": [
+    "/\\*\\s*tw\\s*\\*/\\s*'([^']*)'",
+    "/\\*\\s*tw\\s*\\*/\\s*\"([^\"]*)\""
+  ]
 }

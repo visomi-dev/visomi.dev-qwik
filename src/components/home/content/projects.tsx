@@ -27,16 +27,16 @@ const projects: Project[] = [
       'Nive is a personal finance management app that helps you to control your money.',
     technologies: [
       {
-        name: 'Flutter',
-        color: 'bg-blue-300',
+        name: 'Angular',
+        color: /* tw */ 'bg-red-300',
       },
       {
-        name: 'Elysia',
-        color: 'bg-gray-400',
+        name: 'Nest',
+        color: /* tw */ 'bg-gray-400',
       },
     ],
     preview: nivePreview,
-    link: 'https://nive.mx',
+    link: 'https://nive.visomi.dev',
     wip: true,
   },
 ];
