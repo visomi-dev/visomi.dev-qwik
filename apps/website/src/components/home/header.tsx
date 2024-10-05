@@ -16,33 +16,33 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    label: $localize`Hi`,
+    label: $localize`:@@homeHeaderIntroduction:Hi`,
     href: `/#${nav.introduction}`,
     color: 'text-yellow-500',
   },
   {
-    label: $localize`About Me`,
+    label: $localize`:@@homeHeaderAboutMe:About Me`,
     href: `/#${nav.aboutMe}`,
     color: 'text-blue-700',
   },
   {
-    label: $localize`Projects`,
+    label: $localize`:@@homeHeaderProjects:Projects`,
     href: `/#${nav.projects}`,
     color: 'text-green-700',
   },
   {
-    label: $localize`CS`,
+    label: $localize`:@@homeHeaderCharacterSheet:CS`,
     href: `/#${nav.characterSheet}`,
     color: 'text-red-500',
   },
   {
-    label: $localize`Contact`,
+    label: $localize`:@@homeHeaderContact:Contact`,
     href: `/#${nav.contact}`,
     color: 'text-slate-700',
   },
   {
-    label: $localize`Resume`,
-    href: $localize`/resume`,
+    label: $localize`:@@homeHeaderResume:Resume`,
+    href: $localize`:@@homeHeaderResumeLink:/resume`,
     color: 'text-indigo-600',
   },
 ];
@@ -57,7 +57,7 @@ export const Header = component$(() => {
       <nav class="mx-auto flex max-w-2xl">
         <img
           src={logotype}
-          alt={$localize`visomi personal logotype`}
+          alt={$localize`:@@homeHeaderLogoAlt:visomi personal logotype`}
           width={152}
           height={40}
         />
@@ -71,7 +71,7 @@ export const Header = component$(() => {
           >
             <img
               src={menu}
-              alt={$localize`hamburger menu icon`}
+              alt={$localize`:@@homeHeaderMenuIconAlt:hamburger menu icon`}
               width={36}
               height={36}
             />

@@ -30,12 +30,12 @@ export const Contact = component$(() => {
   return (
     <figure id={nav.contact}>
       <figcaption>
-        <h2 class="text-4xl font-bold">{$localize`Do you have something in mind?`}</h2>
+        <h2 class="text-4xl font-bold">{$localize`:@@homeContentContactTitle:Do you have something in mind?`}</h2>
       </figcaption>
 
       <div class="mt-6 flex flex-col gap-3">
         <p>
-          {$localize`Feel free to contact me at:`}
+          {$localize`:@@homeContentContactDesc:Feel free to contact me at:`}
 
           <a
             class="ml-1 text-blue-400 underline"
@@ -48,7 +48,7 @@ export const Contact = component$(() => {
         </p>
 
         <div class="flex flex-col">
-          <p>{$localize`or you can find me on:`}</p>
+          <p>{$localize`:@@homeContentContactSocials:or you can find me on:`}</p>
 
           <div class="flex flex-wrap gap-3">
             {webLinks.map((webLink) => (

@@ -1,7 +1,7 @@
 export const nav = {
-  introduction: $localize`introduction`,
-  aboutMe: $localize`about-me`,
-  projects: $localize`projects`,
-  characterSheet: $localize`character-sheet`,
-  contact: $localize`contact`,
+  introduction: $localize`:@@homeNavIntroduction:introduction`,
+  aboutMe: $localize`:@@homeNavAboutMe:about-me`,
+  projects: $localize`:@@homeNavProjects:projects`,
+  characterSheet: $localize`:@@homeNavCharacterSheet:character-sheet`,
+  contact: $localize`:@@homeNavContact:contact`,
 };

@@ -18,20 +18,21 @@ export const Introduction = component$(() => {
       <img
         class="rounded"
         src={visomi}
-        alt={$localize`visomi illustration`}
+        alt={$localize`:@@homeContentIntroductionAlt:visomi illustration`}
         width={200}
         height={400}
       />
 
       <figcaption class="mt-6">
         <h1 class="text-2xl font-semibold">
-          Hello! <span class="pr-1">👋</span> {$localize`I'm Michael`}
+          Hello! <span class="pr-1">👋</span>{' '}
+          {$localize`:@@homeContentIntroductionTitle:I'm Michael`}
         </h1>
       </figcaption>
 
       <p class="mt-2 text-center text-3xl font-bold">
-        {$localize`and I transform`} <br />
-        {$localize`ideas into reality through software development.`}
+        {$localize`:@@homeContentIntroductionDesc:and I transform`} <br />
+        {$localize`:@@homeContentIntroductionDesc2:ideas into reality through software development.`}
       </p>
 
       <div class="flex gap-8">
@@ -39,14 +40,17 @@ export const Introduction = component$(() => {
           class="mt-6 flex items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-xl text-white md:hover:bg-opacity-75"
           href={`#${nav.contact}`}
         >
-          {$localize`Contact`}
+          {$localize`:@@homeContentIntroductionContactLink:Contact`}
         </Link>
 
         <Link
           class="mt-6 flex items-center justify-center rounded-full bg-slate-900 px-5 py-2 text-xl text-white md:hover:bg-opacity-75"
-          href={`/${locale}` + $localize`/resume`}
+          href={
+            `/${locale}` +
+            $localize`:@@homeContentIntroductionResumeLink:/resume`
+          }
         >
-          {$localize`Resume`}
+          {$localize`:@@homeContentIntroductionResume:Resume`}
         </Link>
       </div>
     </figure>

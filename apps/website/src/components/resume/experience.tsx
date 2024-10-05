@@ -20,7 +20,7 @@ const jobs: Job[] = [
     company: 'AB InBev',
     logo: abiLogo,
     title: $localize`Tech Lead`,
-    description: $localize`Design and develop a new Archit with React, Node.js, and Azure; Develop a Web Scraper and Power BI reports.`,
+    description: $localize`Design and develop a new Archit with React, Node.js on Azure; Develop a Web Scraper and Power BI reports.`,
     start: $localize`Aug 2022`,
   },
   {

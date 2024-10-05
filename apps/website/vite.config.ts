@@ -24,6 +24,7 @@ export default defineConfig((): UserConfig => {
   return {
     plugins: [
       qwikCity({
+        trailingSlash: false,
         rewriteRoutes: [
           {
             prefix: 'es-LA',

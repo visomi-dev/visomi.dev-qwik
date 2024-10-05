@@ -19,7 +19,7 @@ export const Footer = component$(() => {
       </p>
 
       <p class="text-sm">
-        {$localize`Source code available on`}
+        {$localize`:@@homeFooterSourceCode:Source code available on`}
 
         <a
           class="ml-1 text-blue-400 underline"
