@@ -43,7 +43,7 @@ export const TechPreferences = component$(() => {
   return (
     <div class="flex flex-col gap-4">
       <h3 class="font-bold text-slate-900">
-        {$localize`Frameworks and Languages Preferences`}
+        {$localize`:@@resumeTechPreferencesTitle:Frameworks and Languages Preferences`}
       </h3>
 
       <ul class="grid grid-cols-3 gap-2 md:grid-cols-6">

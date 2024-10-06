@@ -8,7 +8,9 @@ import wakatimeIcon from '~/assets/images/resume/logos/wakatime.svg';
 export const Socials = component$(() => {
   return (
     <div class="flex flex-col gap-3">
-      <p class="text-sm text-slate-500">{$localize`Social Networks`}</p>
+      <p class="text-sm text-slate-500">
+        {$localize`:@@resumeSocialNetworksTitle:Social Networks`}
+      </p>
 
       <ul class="flex flex-col gap-3">
         <li class="flex gap-2">

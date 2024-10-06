@@ -43,7 +43,7 @@ export const ProgrammingLanguages = component$(() => {
   return (
     <div class="flex flex-col gap-4">
       <h3 class="font-bold text-slate-900">
-        {$localize`Programming Languages`}
+        {$localize`:@@resumeProgrammingLanguagesTitle:Programming Languages`}
       </h3>
 
       <ul class="grid grid-cols-3 gap-2 md:grid-cols-6">

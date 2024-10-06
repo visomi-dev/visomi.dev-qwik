@@ -31,15 +31,15 @@ export const MyInfo = component$(() => {
         <h1 class="text-2xl font-bold">Michael Villalba Sotelo</h1>
 
         <p class="text-sm">
-          {age} {$localize`years old`}
+          {age} {$localize`:@@resumePersonalInfoAge:years old`}
         </p>
       </div>
 
       <div class="flex flex-col">
-        <h2 class="text-xl font-bold text-slate-700">{$localize`Full-Stack Developer`}</h2>
+        <h2 class="text-xl font-bold text-slate-700">{$localize`:@@resumePersonalInfoTitle:Full-Stack Developer`}</h2>
 
         <p class="text-sm">
-          {experience} {$localize`years of experience`}
+          {experience} {$localize`:@@resumePersonalInfoExp:years of experience`}
         </p>
       </div>
     </div>
@@ -58,7 +58,9 @@ export const Quote = component$(() => {
           width={20}
         />
 
-        <p class="p-1 text-slate-600">To Infinity and Beyond</p>
+        <p class="p-1 text-slate-600">
+          {$localize`:@@resumePersonalInfoQuote:To Infinity and Beyond`}
+        </p>
 
         <img
           class="p-1"
@@ -69,7 +71,9 @@ export const Quote = component$(() => {
         />
       </div>
 
-      <p class="ml-4 text-xs text-slate-500">Buzz Lightyear</p>
+      <p class="ml-4 text-xs text-slate-500">
+        {$localize`:@@resumePersonalInfoQuotePerson:Buzz Lightyear`}
+      </p>
     </div>
   );
 });

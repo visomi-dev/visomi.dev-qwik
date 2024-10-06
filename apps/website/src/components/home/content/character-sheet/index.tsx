@@ -22,22 +22,28 @@ export const CharacterSheet = component$(() => {
   return (
     <figure id={nav.characterSheet}>
       <figcaption>
-        <h2 class="text-4xl font-bold capitalize">{$localize`Character Sheet`}</h2>
+        <h2 class="text-4xl font-bold capitalize">
+          {$localize`:@@homeContentCSTitle:Character Sheet`}
+        </h2>
 
         <p class="mt-2 text-xs">
-          {$localize`Approx values, provided by WakaTime, I miss some years of data because I miss configured the plugin. Start using it in 12th may 2018.`}
+          {$localize`:@@homeContentCSDesc:Approx values, provided by WakaTime, I miss some years of data because I miss configured the plugin. Start using it in 12th may 2018.`}
         </p>
       </figcaption>
 
       <div class="mt-4 flex flex-col gap-2">
         <div class="flex flex-col">
-          <h3 class="text-2xl capitalize">{$localize`Statistics`}</h3>
+          <h3 class="text-2xl capitalize">
+            {$localize`:@@homeContentCSStatsTitle:Statistics`}
+          </h3>
         </div>
 
         <div class="flex flex-col md:flex-row">
           <ul class="flex flex-col gap-2">
             <li>
-              <span class="capitalize">{$localize`Total Coding Time:`}</span>
+              <span class="capitalize">
+                {$localize`:@@homeContentCSStatsTCT:Total Coding Time:`}
+              </span>
 
               <Resource
                 value={codingTime}
@@ -49,7 +55,9 @@ export const CharacterSheet = component$(() => {
             </li>
 
             <li>
-              <span class="capitalize">{$localize`Best Coding Day:`}</span>
+              <span class="capitalize">
+                {$localize`:@@homeContentCSStatsBCD:Best Coding Day:`}
+              </span>
 
               <Resource
                 value={codingTime}
@@ -63,7 +71,9 @@ export const CharacterSheet = component$(() => {
             </li>
 
             <li>
-              <span class="capitalize">{$localize`Languages:`}</span>
+              <span class="capitalize">
+                {$localize`:@@homeContentCSStatsLang:Languages:`}
+              </span>
 
               <Resource
                 value={languages}
@@ -75,7 +85,9 @@ export const CharacterSheet = component$(() => {
             </li>
 
             <li>
-              <span class="capitalize">{$localize`Editors:`}</span>
+              <span class="capitalize">
+                {$localize`:@@homeContentCSStatsEditors:Editors:`}
+              </span>
 
               <Resource
                 value={editors}
@@ -87,7 +99,9 @@ export const CharacterSheet = component$(() => {
             </li>
 
             <li>
-              <span class="capitalize">{$localize`Operating Systems:`}</span>
+              <span class="capitalize">
+                {$localize`:@@homeContentCSStatsOS:Operating Systems:`}
+              </span>
 
               <Resource
                 value={sos}
@@ -99,7 +113,9 @@ export const CharacterSheet = component$(() => {
             </li>
 
             <li>
-              <span class="capitalize">{$localize`Categories:`}</span>
+              <span class="capitalize">
+                {$localize`:@@homeContentCSStatsCategories:Categories:`}
+              </span>
 
               <Resource
                 value={categories}

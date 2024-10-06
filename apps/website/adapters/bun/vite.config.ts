@@ -21,7 +21,7 @@ export default extendConfig(baseConfig, () => {
       bunServerAdapter({
         ssg: {
           include: ['/*'],
-          origin: 'https://visomi.space',
+          origin: 'https://visomi.dev',
           maxWorkers: 1, // Limit Workers to 1, otherwise SSG will hang when compiling Qwik City app with `bun run --bun build`.
         },
       }),

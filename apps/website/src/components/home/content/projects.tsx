@@ -22,8 +22,8 @@ const projects: Project[] = [
   {
     id: 'nive',
     title: 'Nive',
-    caption: $localize`from financial chaos to nirvana`,
-    description: $localize`Nive is a personal finance management app that helps you to control your money.`,
+    caption: $localize`:@@homeContentProjectNiveCaption:from financial chaos to nirvana`,
+    description: $localize`:@@homeContentProjectNiveDesc:Nive is a personal finance management app that helps you to control your money.`,
     technologies: [
       {
         name: 'Angular',
@@ -44,7 +44,9 @@ export const Projects = component$(() => {
   return (
     <figure id={nav.projects}>
       <figcaption>
-        <h2 class="text-4xl font-bold capitalize">{$localize`Projects`}</h2>
+        <h2 class="text-4xl font-bold capitalize">
+          {$localize`:@@homeContentProjectsTitle:Projects`}
+        </h2>
       </figcaption>
 
       <ul class="mt-6">
@@ -97,7 +99,7 @@ export const Projects = component$(() => {
 
                   {wip && (
                     <p class="text-center text-sm capitalize text-yellow-400">
-                      {$localize`Work In Progress...`}
+                      {$localize`:@@homeContentProjectsWIP:Work In Progress...`}
                     </p>
                   )}
                 </div>

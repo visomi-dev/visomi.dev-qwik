@@ -5,7 +5,7 @@ import { Professional } from '~/components/resume/professional';
 
 export default component$(() => {
   return (
-    <div class="no-scroll-print mx-auto flex h-full w-full flex-col overflow-y-auto md:h-[30cm] md:w-[21cm] md:flex-row">
+    <div class="no-scroll-print mx-auto flex h-full w-full flex-col overflow-y-auto md:h-[21.6cm] md:w-[27.9cm] md:flex-row">
       <Me />
 
       <Professional />

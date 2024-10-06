@@ -57,7 +57,9 @@ const frameworks: Framework[] = [
 export const Frameworks = component$(() => {
   return (
     <div class="flex flex-col gap-4">
-      <h3 class="font-bold text-slate-900">Frameworks and Libs</h3>
+      <h3 class="font-bold text-slate-900">
+        {$localize`:@@resumeFrameworksTitle:Frameworks`}
+      </h3>
 
       <ul class="grid grid-cols-3 gap-2 md:grid-cols-6">
         {frameworks.map((framework) => {
