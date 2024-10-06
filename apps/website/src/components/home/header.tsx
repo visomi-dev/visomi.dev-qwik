@@ -54,7 +54,7 @@ export const Header = component$(() => {
 
   return (
     <header class="fixed top-0 z-10 w-full items-center justify-between bg-white p-6">
-      <nav class="mx-auto flex max-w-2xl">
+      <nav class="mx-auto flex max-w-2xl justify-between">
         <img
           src={logotype}
           alt={$localize`:@@homeHeaderLogoAlt:visomi personal logotype`}

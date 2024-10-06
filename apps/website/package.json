@@ -61,6 +61,7 @@
   },
   "dependencies": {
     "@angular/localize": "^18.2.7",
+    "@fontsource/poppins": "^5.1.0",
     "luxon": "^3.5.0"
   }
 }

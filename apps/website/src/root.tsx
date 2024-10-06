@@ -1,4 +1,4 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
+import { component$, useServerData, useStyles$ } from '@builder.io/qwik';
 import {
   QwikCityProvider,
   RouterOutlet,
@@ -10,6 +10,8 @@ import { i18n } from '@visomi/commons';
 import { RouterHead } from './components/router-head/router-head';
 
 import globalStyles from './global.css?inline';
+
+import '@fontsource/poppins';
 
 export default component$(() => {
   useStyles$(globalStyles);
@@ -24,7 +26,7 @@ export default component$(() => {
 
       <body
         lang={i18n.DEFAULT_LOCALE}
-        class="min-h-screen w-full overflow-auto bg-white pt-20 text-primary"
+        class="h-full w-full overflow-auto bg-white text-primary"
       >
         <RouterOutlet />
         <ServiceWorkerRegister />

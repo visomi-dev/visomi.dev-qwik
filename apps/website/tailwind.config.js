@@ -23,8 +23,8 @@ module.exports = {
         '4xl': '2rem',
       },
       fontFamily: {
-        sans: '"Inter Variable", sans-serif',
-        display: '"Lexend Variable", sans-serif',
+        sans: 'Poppins, sans-serif',
+        display: 'Poppins, sans-serif',
       },
       maxWidth: {
         '2xl': '40rem',
