@@ -30,7 +30,6 @@ export default function (opts: RenderToStreamOptions) {
     // Use container attributes to set attributes on the html tag.
     containerAttributes: {
       locale: opts.serverData?.locale ?? i18n.DEFAULT_LOCALE,
-      'data-route': (opts.containerAttributes ?? {})['q:route'],
       ...opts.containerAttributes,
     },
   });

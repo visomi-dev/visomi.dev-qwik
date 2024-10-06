@@ -8,8 +8,12 @@ body {
   width: 100%;
 }
 
-html[data-route='/[locale]'] body {
+html[q\:route='/[locale]'] body {
   padding-top: 5.5rem;
+}
+
+html[q\:route='/[locale]/resume'] body {
+  padding-top: 0rem;
 }
 
 .title-accent {

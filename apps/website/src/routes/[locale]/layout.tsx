@@ -12,9 +12,5 @@ export const onRequest: RequestHandler = ({ locale, params }) => {
 export default component$(() => {
   useI18n();
 
-  return (
-    <>
-      <Slot />
-    </>
-  );
+  return <Slot />;
 });
