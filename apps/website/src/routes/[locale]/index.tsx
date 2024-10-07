@@ -19,6 +19,13 @@ export const head: DocumentHead = {
 export default component$(() => {
   return (
     <>
+      <style>
+        {`
+          body {
+            padding-top: 5.5rem;
+          }
+        `}
+      </style>
       <Header />
       <Content />
       <Footer />

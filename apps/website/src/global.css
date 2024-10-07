@@ -2,30 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
-html[q\:route='/[locale]'] body {
-  padding-top: 5.5rem;
-}
-
-html[q\:route='/[locale]/resume'] body {
-  padding-top: 0rem;
-}
-
-.title-accent {
-  background: linear-gradient(#a478e8, #516cf7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.bg-accent {
-  background: linear-gradient(135deg, #a478e8a5, #516cf7a6);
-}
-
 @media print {
   .no-scroll-print {
     overflow: hidden !important;
