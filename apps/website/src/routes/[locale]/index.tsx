@@ -1,6 +1,6 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
 
-import { component$, useStyles$ } from '@builder.io/qwik';
+import { component$ } from '@builder.io/qwik';
 
 import { Header } from '~/components/home/header';
 import { Content } from '~/components/home/content';
@@ -19,10 +19,10 @@ export const head: DocumentHead = {
 };
 
 export default component$(() => {
-  useStyles$(styles);
-
   return (
     <>
+      <style dangerouslySetInnerHTML={styles} />
+
       <Header />
       <Content />
       <Footer />
