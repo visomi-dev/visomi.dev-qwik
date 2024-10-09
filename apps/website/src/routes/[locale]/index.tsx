@@ -1,10 +1,12 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
 
-import { component$ } from '@builder.io/qwik';
+import { component$, useStyles$ } from '@builder.io/qwik';
 
 import { Header } from '~/components/home/header';
 import { Content } from '~/components/home/content';
 import { Footer } from '~/components/home/footer';
+
+import styles from './index.css?inline';
 
 export const head: DocumentHead = {
   title: 'visomi.dev',
@@ -17,15 +19,10 @@ export const head: DocumentHead = {
 };
 
 export default component$(() => {
+  useStyles$(styles);
+
   return (
     <>
-      <style>
-        {`
-          body {
-            padding-top: 5.5rem;
-          }
-        `}
-      </style>
       <Header />
       <Content />
       <Footer />
