@@ -15,6 +15,7 @@ export const Me = component$(() => {
       }}
     >
       <MyInfo />
+
       <Quote />
 
       <hr />
